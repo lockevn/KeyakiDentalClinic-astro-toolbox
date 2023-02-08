@@ -3,47 +3,25 @@ import Layout from '../components/Layout.astro';
 import FeedbackForm from '../components/FeedbackForm.astro';
 ---
 
-<Layout title="Astro Toolbox">
+<Layout title="Keyaki Dental Clinic">
   <main>
     <div class="header">
-      <div class="logo">
-        <img
-          src="https://res.cloudinary.com/dzkoxrsdj/image/upload/v1652291187/astro_1_c1yk5a.png"
-        />
-      </div>
+      <h1><a href="/">Keyaki Dental Clinic</a></h1>
     </div>
     <div class="intro">
-      <p>
-        Hi 👋! This template gives you an
-        <a href="https://astro.build/">Astro</a> app with the scaffolding for
-        <a href="https://ntl.fyi/3upc4Qo"
-          >Netlify Functions</a
-        >, <a href="https://ntl.fyi/3bICRk6">Forms</a>, and
-      <a href="https://ntl.fyi/3PcY8RH">Redirects</a>. Our
-      aim was to give you the code you would need to hit the ground running
-      with a few fun features.
-    </p>
-
-    <p>
-      You can find the code for this project on GitHub at
-      <a href="https://github.com/netlify-templates/astro-toolbox"
-        >https://github.com/netlify-templates/astro-toolbox</a
-      >! Happy coding!
-    </p>
+      Floor 2nd, S2 Tower, <a
+        href="https://www.google.com/maps/place/Sun+Plaza+Th%E1%BB%A5y+Khu%C3%AA/@21.0404572,105.8264387,15z/data=!4m2!3m1!1s0x0:0xdfc0be5ac8ed0c79?sa=X&ved=2ahUKEwj_q5fE44X9AhUBfd4KHYzDA9EQ_BJ6BAhMEAg"
+        >Sun Grand City Thụy Khuê</a
+      >, Hà Nội
     </div>
+
+    <hr />
+
     <FeedbackForm />
-    <a class="jokes-link" href="/api/joke">
-    <h3>
-      Click here for function-loaded jokes!
-    </h3>
-    </a>
+
     <footer class="footer">
-      Made with <a href="https://ntl.fyi/3P0dwBi"
-        ><img
-          src="https://res.cloudinary.com/dzkoxrsdj/image/upload/v1646714899/netliheart_ezlkim.svg"
-          alt="Netlify Logo"
-        /></a
-      > for you!
+      Made with&nbsp;<a href="https://gurucore.com" class="mx-5">Gurucore</a> &nbsp;
+      <a class="" href="/api/joke" title=" by Netlify functions">2023</a>
     </footer>
   </main>
 </Layout>
@@ -63,9 +41,9 @@ import FeedbackForm from '../components/FeedbackForm.astro';
     flex-direction: column;
     justify-content: center;
     margin: 0 auto;
-    max-width: 60ch;
+    max-width: 80ch;
     align-items: center;
-  } 
+  }
 
   footer {
     width: 100%;
@@ -74,9 +52,5 @@ import FeedbackForm from '../components/FeedbackForm.astro';
     display: flex;
     justify-content: center;
     align-items: center;
-  }
-
-  footer img {
-    width: 20px;
   }
 </style>

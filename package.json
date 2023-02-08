@@ -7,7 +7,7 @@
     "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "lint": "npm run lint:prettier && npm run lint:eslint",
+    "lint": "yarn lint:prettier && yarn lint:eslint",
     "lint:prettier": "prettier --write \"src/**/*.{css,astro}\"",
     "lint:eslint": "eslint \"src/**/*.{css,js}\""
   },
