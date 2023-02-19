@@ -1,6 +1,12 @@
+import { Handler, HandlerEvent, HandlerContext } from '@netlify/functions';
 import { Client } from 'pg';
 
-export async function handler(event, context) {
+// export async function handler(event, context) {}
+
+export const handler: Handler = async (
+  event: HandlerEvent,
+  context: HandlerContext
+) => {
   // $env:DATABASE_URL = "postgresql://dbadmin:cwKPcdBvwkFsX9Sd4RiNFA@qenglish-3881.6xw.cockroachlabs.cloud:26257/defaultdb?sslmode=verify-full"
   const connectionString =
     'postgresql://dbadmin:cwKPcdBvwkFsX9Sd4RiNFA@qenglish-3881.6xw.cockroachlabs.cloud:26257/defaultdb?sslmode=verify-full';
@@ -26,4 +32,10 @@ export async function handler(event, context) {
   } finally {
     client.end();
   }
-}
+
+  return {
+    statusCode: 200,
+    body: JSON.stringify({ message: 'Hello World' }),
+  };
+};
+
