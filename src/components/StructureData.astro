@@ -1,0 +1,76 @@
+---
+const logoAbsolutedUrl = 'https://KeyakiDentalClinic.com/img/logo.png';
+const phoneNumber = '+84 24 3573 9623';
+const postalAddress = {
+  '@type': 'PostalAddress',
+  streetAddress:
+    'Floor 2nd, S2 Tower Sun Grand City, 69B Thụy Khuê street, Hà Nội',
+  addressCountry: 'VN',
+  addressLocality: 'Hanoi',
+  addressRegion: 'HN',
+  postalCode: '100000',
+};
+
+const receptionContactPoint = {
+  '@type': 'ContactPoint',
+  contactType: 'customer service',
+  email: 'info@KeyakiDentalClinic.com',
+  areaServed: 'VN',
+  availableLanguage: ['Japanese', 'English', 'Vietnamese'],
+  telephone: phoneNumber,
+};
+
+const schema = {
+  '@context': 'http://schema.org/',
+  '@graph': [
+    {
+      '@type': 'Corporation',
+      '@id': 'https://KeyakiDentalClinic.com',
+      name: 'KeyakiDentalClinic',
+      logo: {
+        '@type': 'ImageObject',
+        url: logoAbsolutedUrl,
+      },
+      url: 'https://KeyakiDentalClinic.com',
+      contactPoint: [receptionContactPoint],
+      sameAs: [
+        'https://www.facebook.com/KeyakiDentalClinic/',
+        // 'https://www.youtube.com/channel/UCmPjxX2o8Fw36IvswJ8h7sg',
+      ],
+    },
+    {
+      '@type': 'ProfessionalService',
+      geo: {
+        '@type': 'GeoCoordinates',
+        latitude: '21.040618',
+        longitude: '105.8259256',
+        address: postalAddress,
+      },
+      url: 'https://KeyakiDentalClinic.com',
+      image: logoAbsolutedUrl,
+      '@context': 'https://schema.org',
+      '@id': 'KeyakiDentalClinic.com',
+      name: 'Keyaki Dental Clinic Vietnam Ltd.',
+      address: postalAddress,
+      openingHours: ['Mo-Sa 9:00-18:00'],
+      priceRange: '$$',
+      hasmap: 'https://goo.gl/maps/B7PBjjhnVAafe4sK9',
+      sameAs: ['https://www.facebook.com/KeyakiDentalClinic/'],
+      brand: {
+        '@type': 'Brand',
+        name: 'KeyakiDentalClinic',
+      },
+      contactPoint: [receptionContactPoint],
+      logo: {
+        '@type': 'ImageObject',
+        url: logoAbsolutedUrl,
+      },
+      telephone: phoneNumber,
+    },
+  ],
+};
+
+// https://github.com/withastro/astro/issues/3544
+---
+
+<script type="application/ld+json" set:html={JSON.stringify(schema)}></script>
