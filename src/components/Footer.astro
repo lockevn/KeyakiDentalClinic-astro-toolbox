@@ -2,8 +2,11 @@
 import packageJson from '../../package.json';
 ---
 
-<footer class="footer" title={packageJson.releasenote}>
-  v{packageJson.version}
-  &nbsp;
-  <a class="" href="/api/joke" title=" by Netlify functions">2023</a>
+<footer
+  class="footer"
+  title={`v${packageJson.version} - ${packageJson.releasenote}`}
+>
+  <div class="m-1">
+    © Keyaki Dental Clinic, a member of JVDC Group Co., Ltd.
+  </div>
 </footer>

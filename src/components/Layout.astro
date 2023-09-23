@@ -1,5 +1,6 @@
 ---
 import Footer from './Footer.astro';
+import Header from './Header.astro';
 import StructureData from './StructureData.astro';
 
 export interface Props {
@@ -79,9 +80,11 @@ const logoAbsolutedUrl = `https://KeyakiDentalClinic.com/img/logo.png`;
   </head>
 
   <body>
+    <Header />
+
     <slot />
 
-    <!-- <Footer /> -->
+    <Footer />
 
     <!-- Google tag (gtag.js) -->
     <script defer src="https://www.googletagmanager.com/gtag/js?id=G-E0L9PZK0M2"
