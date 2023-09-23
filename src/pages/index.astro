@@ -1,12 +1,14 @@
 ---
 import Layout from '../components/Layout.astro';
 import HomeHero from '../components/home/HomeHero.astro';
+import HomeIntro from '../components/home/HomeIntro.astro';
 import Map from '../components/home/Map.astro';
 ---
 
 <Layout title="Keyaki Dental Clinic">
   <main>
     <HomeHero />
+    <HomeIntro />
     <Map />
   </main>
 </Layout>
@@ -24,18 +26,6 @@ import Map from '../components/home/Map.astro';
     margin: 0 auto;
     max-width: 80ch;
     align-items: center;
-  }
-
-  .header {
-    display: table;
-    position: relative;
-    width: 100%;
-    height: 20vh;
-    background: url(/img/bg.jpg) no-repeat center center scroll;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
-    -o-background-size: cover;
   }
 
   /* Map */
