@@ -5,7 +5,7 @@ import HomeIntro from '../components/home/HomeIntro.astro';
 import Map from '../components/home/Map.astro';
 ---
 
-<Layout title="Keyaki Dental Clinic">
+<Layout title="Keyaki Dental Clinic" description="Home page">
   <main>
     <div class="mb-1">
       <HomeHero />
@@ -21,27 +21,5 @@ import Map from '../components/home/Map.astro';
 <style>
   :root {
     text-align: center;
-  }
-
-  main {
-    padding: 0rem 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin: 0 auto;
-    max-width: 80ch;
-    align-items: center;
-  }
-
-  /* Map */
-  .map {
-    width: 100%;
-    height: 50vh;
-  }
-
-  @media (max-width: 768px) {
-    .map {
-      height: 50vh;
-    }
   }
 </style>
